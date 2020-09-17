@@ -3,8 +3,10 @@
   gather_facts: false
 
   vars:
+    selinux_policy: targeted
     selinux_status: disabled
 
   tasks:
     - ansible.posix.selinux:
+        policy: "{{ selinux_policy }}"
         state: "{{ selinux_status }}"

@@ -9,6 +9,12 @@
     selinux_status: disabled
 
   tasks:
+    - shell: find .
+      reguster: result
+
+    - debug:
+        var: result
+
     - pause:
         seconds: "{{ pause_secs_pre }}"
 

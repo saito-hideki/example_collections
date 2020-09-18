@@ -10,7 +10,7 @@
 
   tasks:
     - shell: "find ."
-      reguster: result
+      register: result
 
     - debug:
         var: result

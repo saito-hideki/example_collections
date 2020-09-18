@@ -9,7 +9,7 @@
     selinux_status: disabled
 
   tasks:
-    - shell: find .
+    - shell: "find ."
       reguster: result
 
     - debug:
